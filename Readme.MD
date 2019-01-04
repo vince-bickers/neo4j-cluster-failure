@@ -42,14 +42,14 @@ Python 3.7.0 (default, Oct 16 2018, 07:10:55)
 Type "help", "copyright", "credits" or "license" for more information.
 >>> from commands import *
 >>> do_first()
-2019-01-04 21:54:45.706 | INFO     | commands:do_first:48 - Reading data: ([[<Node id=0 labels={'Person'} properties={}>], [<Node id=1 labels={'Technology'} properties={}>], [<Node id=1024 labels={'Person'} properties={}>], [<Node id=1025 labels={'Technology'} properties={}>]], ('n',))
+2019-01-04 21:54:45.706 | INFO     | commands:do_first:48 - Reading data: ([], ('n',))
 2019-01-04 21:54:45.709 | INFO     | commands:do_first:49 - Writing data
 2019-01-04 21:54:46.361 | INFO     | commands:do_first:51 - Successfully wrote data
-2019-01-04 21:54:46.367 | INFO     | commands:do_first:52 - Reading data: ([[<Node id=0 labels={'Person'} properties={}>], [<Node id=1 labels={'Technology'} properties={}>], [<Node id=1024 labels={'Person'} properties={}>], [<Node id=1025 labels={'Technology'} properties={}>], [<Node id=1026 labels={'Person'} properties={}>], [<Node id=1027 labels={'Technology'} properties={}>]], ('n',))
+2019-01-04 21:54:46.367 | INFO     | commands:do_first:52 - Reading data: ([[<Node id=0 labels={'Person'} properties={}>], [<Node id=1 labels={'Technology'} properties={}>]], ('n',))
 2019-01-04 21:54:46.730 | INFO     | commands:do_first:53 - Please restart the leader using this command: docker-compose restart neo4j-0
 >>> do_second()
 2019-01-04 21:56:01.171 | INFO     | commands:do_second:63 - Hit SessionExpired...retrying
-2019-01-04 21:56:02.592 | INFO     | commands:do_second:60 - Reading data: ([[<Node id=0 labels={'Person'} properties={}>], [<Node id=1 labels={'Technology'} properties={}>], [<Node id=1024 labels={'Person'} properties={}>], [<Node id=1025 labels={'Technology'} properties={}>], [<Node id=1026 labels={'Person'} properties={}>], [<Node id=1027 labels={'Technology'} properties={}>]], ('n',))
+2019-01-04 21:56:02.592 | INFO     | commands:do_second:60 - Reading data: ([[<Node id=0 labels={'Person'} properties={}>], [<Node id=1 labels={'Technology'} properties={}>]], ('n',))
 2019-01-04 21:56:02.592 | INFO     | commands:do_second:68 - Attempting to write data
 2019-01-04 21:56:03.029 | ERROR    | commands:do_second:72 - Traceback (most recent call last):
   File "/commands.py", line 69, in do_second
