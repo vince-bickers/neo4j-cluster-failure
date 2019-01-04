@@ -25,7 +25,6 @@ The problem occurs after neomodel has connected to the cluster for the first tim
 
 
 Sample output from terminal 2:
-DRA-W10-MAC027:neo4j-cluster-failure rgrant$ docker ps
 ```
 DRA-W10-MAC027:neo4j-cluster-failure rgrant$ docker ps
 
