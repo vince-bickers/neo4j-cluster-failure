@@ -1,0 +1,50 @@
+version: "3"
+services:
+  neo4j-0:
+    image: neo4j:3.5-enterprise
+    expose:
+      - 7474
+      - 7687
+    environment:
+      NEO4J_ACCEPT_LICENSE_AGREEMENT: "yes"
+      NEO4J_causal__clustering_expected__core__cluster__size: 3
+      NEO4J_causal_clustering.minimum_core_cluster_size_at_formation: 3
+      NEO4J_causal_clustering.minimum_core_cluster_size_at_runtime: 3
+      NEO4J_dbms_connectors_default__advertised__address: neo4j-0
+      NEO4J_dbms_mode: CORE
+      NEO4J_causal__clustering_initial__discovery__members: neo4j-0:5000,neo4j-1:5000,neo4j-2:5000
+      NEO4J_AUTH: none
+  neo4j-1:
+    image: neo4j:3.5-enterprise
+    expose:
+      - 7474
+      - 7687
+    environment:
+      NEO4J_ACCEPT_LICENSE_AGREEMENT: "yes"
+      NEO4J_causal__clustering_expected__core__cluster__size: 3
+      NEO4J_causal_clustering.minimum_core_cluster_size_at_formation: 3
+      NEO4J_causal_clustering.minimum_core_cluster_size_at_runtime: 3
+      NEO4J_dbms_connectors_default__advertised__address: neo4j-1
+      NEO4J_dbms_mode: CORE
+      NEO4J_causal__clustering_initial__discovery__members: neo4j-0:5000,neo4j-1:5000,neo4j-2:5000
+      NEO4J_AUTH: none
+  neo4j-2:
+    image: neo4j:3.5-enterprise
+    expose:
+      - 7474
+      - 7687
+    environment:
+      NEO4J_ACCEPT_LICENSE_AGREEMENT: "yes"
+      NEO4J_causal__clustering_expected__core__cluster__size: 3
+      NEO4J_causal_clustering.minimum_core_cluster_size_at_formation: 3
+      NEO4J_causal_clustering.minimum_core_cluster_size_at_runtime: 3
+      NEO4J_dbms_connectors_default__advertised__address: neo4j-2
+      NEO4J_dbms_mode: CORE
+      NEO4J_causal__clustering_initial__discovery__members: neo4j-0:5000,neo4j-1:5000,neo4j-2:5000
+      NEO4J_AUTH: none
+  repro:
+    build:
+      context: repro/
+      dockerfile: Dockerfile
+    environment:
+      CONN_STR: "bolt+routing://neo4j-0:7687"
