@@ -26,7 +26,7 @@ The problem occurs after neomodel has connected to the cluster for the first tim
 
 Sample output from terminal 2:
 ```
-DRA-W10-MAC027:neo4j-cluster-failure bob docker ps
+DRA-W10-MAC027:neo4j-cluster-failure bob$ docker ps
 
 CONTAINER ID        IMAGE                            COMMAND                  CREATED              STATUS              PORTS                     NAMES
 ed16e171ac25        neo4j-cluster-failure_repro      "python3 miniserv.py"    54 seconds ago       Up 53 seconds                                 neo4j-cluster-failure_repro_1
