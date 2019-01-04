@@ -9,7 +9,7 @@ The problem occurs after neomodel has connected to the cluster for the first tim
  - [Docker](https://www.docker.com/products/docker-desktop)
  - [Docker Compose](https://docs.docker.com/compose/install/)
 
-### How to use
+### How to reproduce
 
  1. Clone this repo to a local folder
  2. Open 3 terminals in the local folder
