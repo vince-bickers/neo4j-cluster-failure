@@ -21,7 +21,7 @@ The problem occurs after neomodel has connected to the cluster for the first tim
    * run `from commands import *`
    * run `do_first()`, noting the command it tells you to run. (e.g. `docker-compose restart neo4j-0`)
  5. In terminal 3, run the restart command from the previous step and wait for the cluster to re-establish
- 6. In terminal 2, run `do_second()` and note the output; this may throw a SessionTimeout after cluster re-establishment (which also isn't great), but that will pass, so I've coded in a retry
+ 6. In terminal 2, run `do_second()` and note the output; this may throw a SessionExpired after cluster re-establishment (which also isn't great), but that will pass, so I've coded in a retry
 
 
 Sample output from terminal 2:
